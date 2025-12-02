@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function Login() {
   return (
    <> 
-      <h1>StudyBuddy</h1>
       <section>
-        <div> 
-          <Link href="./login">Login</Link> <br />
-          <Link href="./">Signup</Link>
+        <h1>Sign Up</h1>
+        <div>
+          <Link href="/">Home</Link> <br />
+          <Link href="./login">Login</Link>
         </div>
 
       </section>

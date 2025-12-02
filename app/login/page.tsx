@@ -4,12 +4,11 @@ export default function Login() {
   return (
    <> 
       <section>
+        <h1>Login</h1>
         <div>
-          <Link href="/">Home</Link> 
-           {/*what  */}
+          <Link href="/">Home</Link> <br />
+          <Link href="./signup">Sign up</Link>
         </div>
-
-        <div>Login Page</div>
 
       </section>
    </>

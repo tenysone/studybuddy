@@ -5,7 +5,8 @@ export default function Login() {
    <> 
       <section>
         <div>
-          <Link href="/">Home</Link>  
+          <Link href="/">Home</Link> 
+           {/*what  */}
         </div>
 
         <div>Login Page</div>

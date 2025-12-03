@@ -8,13 +8,11 @@ export default function Home() {
         {/** Welcome message */}
         <div className="max-w-md w-full mx-auto text-center">
           <div className="flex flex-col gap-2">
-            <h1 className="text-3xl font-bold">Hello, Guest!</h1>
+            <h1 className="text-5xl font-bold font-serif">Viridian</h1>
             <p>
-              Welcome to Study Buddy!{' '}
               <a className="underline" href="/signup">
                 Create your free account
-              </a>{' '}
-              and upload your notes to get instant AI-powered study help.
+              </a> and upload your notes to get instant AI-powered study help.
             </p>
           </div>
         </div>

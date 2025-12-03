@@ -118,7 +118,7 @@ export default function FormChat() {
               console.log(e.currentTarget.value)
               setInput(e.currentTarget.value)
             }}
-          > </textarea>
+          ></textarea>
 
           <button
             type="button"

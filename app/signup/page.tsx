@@ -1,13 +1,15 @@
-import Link from "next/link";
-import Header from "../components/Header";
-import Default from "../templates/Default";
+import Bare from "../templates/Bare";
+import FormSignup from "../components/forms/FormSignup";
 
 export default function Login() {
   return (
-    <Default>
-      <div>
+    <Bare>
+      <div className="font-sans text-bold text-5xl mt-10">
         Signup
       </div>
-    </Default>
+      <div>
+        <FormSignup />
+      </div>
+    </Bare>
   );
 }

@@ -54,9 +54,9 @@ export default function FormChat() {
   }
 
     return (
-    <div className="w-full bg-transparent flex flex-col h-full overflow-hidden">
+    <div className="w-full bg-transparent flex flex-col h-full">
 
-      <div className="flex-1 overflow-auto w-full mb-4 pb-80 flex justify-center">
+      <div className="flex-1 overflow-auto w-full mb-30 pb-80 flex justify-center max-h-100 scrollbar-hide">
         {/* Message Display Area */}
       {messages && messages.length > 0 && (
         <div className="flex flex-col gap-1 w-full max-w-4xl">
@@ -67,11 +67,11 @@ export default function FormChat() {
           className={`flex gap-3 p-2 ${message.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
           >
           {message.role === 'user' ? (
-            <div className="h-10 w-10 aspect-square rounded-full border border-blue-300 flex items-center justify-center bg-blue-100 text-blue-600">
+            <div className="h-10 w-10 aspect-square rounded-full border border-green-300 flex items-center justify-center bg-green-100/70 text-green-600">
             <UserRound />
             </div>
           ) : (
-            <div className="h-10 w-10 aspect-square rounded-full border border-gray-300 flex items-center justify-center bg-white text-gray-700">
+            <div className="h-10 w-10 aspect-square rounded-full border border-gray-300 flex items-center justify-center bg-white/70 text-gray-700">
             <Bot />
             </div>
           )}
@@ -83,8 +83,8 @@ export default function FormChat() {
                 key={`${message.id}-${i}`}
                 className={`flex flex-col p-4 rounded-xl border shadow-sm ${
                   message.role === 'user' 
-                    ? 'bg-blue-100/70 border-blue-300/40' 
-                    : 'bg-white/70 border-gray-200'
+                    ? 'bg-green-100/60 border-green-300/40' 
+                    : 'bg-white/60 border-gray-200'
                 }`}
               >
                 <div className="[&>p]:mb-3 [&>p]:last:mb-0 [&>ul]:mb-4 [&>ul>li]:list-disc [&>ul>li]:ml-5 [&>ol>li]:list-decimal [&>ol>li]:ml-5">
@@ -111,7 +111,7 @@ export default function FormChat() {
           <textarea
             name="message"
             placeholder="What do you want to know?"
-            className="w-full max-w-4xl p-2 pb-12 pr-14 pl-14 border rounded resize-none bg-white opacity-100"
+            className="w-full max-w-4xl p-2 pb-12 pr-14 pl-14 border rounded resize-none bg-white opacity-80"
             onKeyDown={handleKeyDown}
             value={input}
             onChange={(e) => {

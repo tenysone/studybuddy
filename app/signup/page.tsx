@@ -1,16 +1,13 @@
 import Link from "next/link";
+import Header from "../components/Header";
+import Default from "../templates/Default";
 
 export default function Login() {
   return (
-   <> 
-      <section>
-        <h1>Sign Up</h1>
-        <div>
-          <Link href="/">Home</Link> <br />
-          <Link href="./login">Login</Link>
-        </div>
-
-      </section>
-   </>
+    <Default>
+      <div>
+        Signup
+      </div>
+    </Default>
   );
 }

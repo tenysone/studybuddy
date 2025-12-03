@@ -54,7 +54,7 @@ export default function FormChat() {
   }
 
     return (
-    <div className="w-full bg-transparent flex flex-col h-full overflow-hidden bg-amber-200">
+    <div className="w-full bg-transparent flex flex-col h-full overflow-hidden">
 
       <div className="flex-1 overflow-auto w-full mb-4 pb-80 flex justify-center">
         {/* Message Display Area */}
@@ -64,7 +64,7 @@ export default function FormChat() {
           <div
           data-loading={isLoading}
           key={message.id}
-          className={`flex gap-3 p-2 ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
+          className={`flex gap-3 p-2 ${message.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
           >
           {message.role === 'user' ? (
             <div className="h-10 w-10 aspect-square rounded-full border border-blue-300 flex items-center justify-center bg-blue-100 text-blue-600">
@@ -83,8 +83,8 @@ export default function FormChat() {
                 key={`${message.id}-${i}`}
                 className={`flex flex-col p-4 rounded-xl border shadow-sm ${
                   message.role === 'user' 
-                    ? 'bg-blue-100 border-blue-300' 
-                    : 'bg-white border-gray-200'
+                    ? 'bg-blue-100/70 border-blue-300/40' 
+                    : 'bg-white/70 border-gray-200'
                 }`}
               >
                 <div className="[&>p]:mb-3 [&>p]:last:mb-0 [&>ul]:mb-4 [&>ul>li]:list-disc [&>ul>li]:ml-5 [&>ol>li]:list-decimal [&>ol>li]:ml-5">
@@ -118,12 +118,12 @@ export default function FormChat() {
               console.log(e.currentTarget.value)
               setInput(e.currentTarget.value)
             }}
-          ></textarea>
+          > </textarea>
 
           <button
             type="button"
             aria-label="Add attachment"
-            className="absolute ml-2.5 left-3 bottom-3 p-2 rounded-full flex items-center justify-center hover:scale-105 transition-transform hover:cursor-pointer"
+            className="absolute ml-2.5 left-3 bottom-3 p-2 rounded-full text-gray-500 flex items-center justify-center hover:scale-105 transition-transform hover:cursor-pointer"
           >
             <Plus className="h-5 w-5" />
           </button>

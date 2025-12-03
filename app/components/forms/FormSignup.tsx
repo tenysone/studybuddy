@@ -41,7 +41,7 @@ export default function FormSignup() {
     <form
       data-loading={isPending}
       action={handleSubmit}
-      className="flex flex-col gap-3"
+      className="flex flex-col gap-5 mt-5 mb-5 w-100"
       noValidate
     >
       <div>
@@ -98,7 +98,7 @@ export default function FormSignup() {
         )}
       </div>
       <div className="flex justify-center">
-        <button type="submit" className="button button--default">
+        <button type="submit" className="button button--default w-full justify-center mt-8">
           {isPending ? 'Please wait...' : 'Sign up'}
         </button>
       </div>

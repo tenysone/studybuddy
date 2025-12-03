@@ -1,5 +1,6 @@
 import Header from '@/app/components/Header'
 import Footer from '@/app/components/Footer'
+import { Toaster } from 'react-hot-toast'
 
 export default function ({
   className,

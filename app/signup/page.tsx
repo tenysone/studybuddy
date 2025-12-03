@@ -1,11 +1,13 @@
 import Bare from "../templates/Bare";
 import FormSignup from "../components/forms/FormSignup";
+import Logo from "../components/Logo";
 
 export default function Login() {
   return (
     <Bare>
-      <div className="font-sans text-bold text-5xl mt-10">
-        Signup
+      <Logo />
+      <div className="font-sans font-semibold text-2xl mt-10 mb-5">
+        Create an Account
       </div>
       <div>
         <FormSignup />
